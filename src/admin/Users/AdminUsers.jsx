@@ -55,7 +55,10 @@ const AdminUsers = ({ user }) => {
   console.log(users);
   return (
     <Layout>
-      <div className="users">
+      <div className="users"
+       data-aos="zoom-in"
+       data-aos-duration="1000"
+       >
         <h1>All Users</h1>
         <table border={"black"}>
           <thead>

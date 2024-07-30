@@ -33,7 +33,10 @@ const ResetPassword = () => {
   };
   return (
     <div className="auth-page">
-      <div className="auth-form">
+      <div className="auth-form"
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+      >
         <h2>Reset Password</h2>
         <form onSubmit={handleSubmit}>
           <label htmlFor="text">Enter Password</label>

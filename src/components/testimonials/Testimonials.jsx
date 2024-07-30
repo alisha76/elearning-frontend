@@ -42,8 +42,18 @@ const Testimonials = () => {
   ];
   return (
     <section className="testimonials">
-      <h2>What our students say</h2>
-      <div className="testmonials-cards">
+      <h2
+        data-aos="fade-up"
+    data-aos-duration="1000"
+      ><span style={{
+            backgroundImage: "linear-gradient(to right, #4567b7, #8e44ad)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent"
+          }}>What our students say</span></h2>
+      <div className="testmonials-cards"
+        data-aos="flip-left"
+        data-aos-duration="1000"
+        >
         {testimonialsData.map((e) => (
           <div className="testimonial-card" key={e.id}>
             <div className="student-image">

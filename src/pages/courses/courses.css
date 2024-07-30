@@ -1,12 +1,27 @@
 .courses {
+    /* padding: 80px 0;
+    text-align: center;
+    min-height: 60vh; */
     padding: 80px 0;
     text-align: center;
     min-height: 60vh;
+    height: 100%; /* add this to ensure the container has a height */
+    width: 100%; /* add this to ensure the container has a width */
+    background-image: url('../../assets/Images/learning-management-system-concept-businessman-600nw-2416910891.webp'); /* add your background image URL here */
+    background-size: cover;
+    background-position: center;
   
     h2 {
-      font-size: 32px;
-      color: #8a4baf;
-      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      display: inline-block; /* add this to make the h2 an inline-block element */
+      padding: 10px 20px; /* add some padding to create a box around the text */
+      border-radius: 10px; /* add a border radius to give the box a rounded corner */
+      background: linear-gradient(to bottom,#4567b7, #6495ed); /* add a background color to the box */
+      background-clip: padding-box; /* add this to ensure the background color only applies to the padding area */
+      border: 1px solid #ddd; /* add a border to the box */
     }
   
     .course-container {

@@ -1,0 +1,218 @@
+.teacher-container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.986), rgba(0, 0, 0, 0.981));
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px;
+  
+}
+
+.teacher-image-container {
+  flex-basis: 40%;
+  margin-right: 20px;
+  position: relative;
+}
+
+.teacher-image {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  transform: scale(0.8); /* add scale effect for pop-up */
+  transition: transform 0.5s ease-in-out;
+  border: 5px solid yellow;
+  animation: super 3s infinite;
+}
+
+
+  .teacher-image:hover {
+    transform: scale(1.0); /* scale up on hover */
+  }
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .teacher-image {
+    height: 100%;
+    width:auto
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .teacher-image {
+    height: 55%;
+    width: auto;
+  }
+  .teacher-content {
+    padding: 70px;
+  }
+  .teacher-actions {
+    padding: 70px;
+  }
+}
+
+/* Small screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .teacher-image {
+    width: 80%;
+    height: 50%;
+    margin-top: 100px;
+  }
+  .teacher-content {
+    padding: 50px;
+  }
+  .teacher-actions {
+    padding: 50px;
+  }
+  .teacher-actions h1 {
+    font-size: 24px;
+    margin-top: 80px;
+  }
+  .teacher-actions p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+/* Extra small screens (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .teacher-image {
+    width: 90%;
+    height: 40%;
+    margin-top: 80px;
+  }
+  .teacher-content {
+    padding: 30px;
+  }
+  .teacher-actions {
+    padding: 30px;
+  }
+  .teacher-actions h1 {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+  .teacher-actions p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+/* Mobile screens (below 480px) */
+@media (max-width: 479px) {
+  .teacher-image {
+    width: 100%;
+    height: 30%;
+    margin-top: 60px;
+  }
+  .teacher-content {
+    padding: 20px;
+  }
+  .teacher-actions {
+    padding: 20px;
+  }
+  .teacher-actions h1 {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .teacher-actions p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Tablet screens (portrait) */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .teacher-image {
+    width: 80%;
+    height: 50%;
+    margin-top: 100px;
+  }
+  .teacher-content {
+    padding: 50px;
+  }
+  .teacher-actions {
+    padding: 50px;
+  }
+  .teacher-actions h1 {
+    font-size: 24px;
+    margin-top: 80px;
+  }
+  .teacher-actions p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile screens (landscape) */
+@media (max-width: 479px) and (orientation: landscape) {
+  .teacher-image {
+    width: 100%;
+    height: 30%;
+    margin-top: 60px;
+  }
+  .teacher-content {
+    padding: 20px;
+  }
+  .teacher-actions {
+    padding: 20px;
+  }
+  .teacher-actions h1 {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .teacher-actions p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+.teacher-actions h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.teacher-actions p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+@keyframes super {
+  0% {
+    border-color: blue;
+    transform: translate(0,0px);
+    box-shadow: 10px 10px 100px 50px blue;
+    background-color: blue; 
+  }
+   25%{
+    border-color: rgb(239,244,11);
+    box-shadow: 10px 10px 100px 50px rgb(239,244,11);
+    background-color: green;
+   }
+  50%{
+    border-color: rgb(12,12,199);
+    transform: translate(0,10px);
+    box-shadow: 10px 10px 100px 50px rgb(12,12,199);
+    background-color: yellow;
+  }
+  75%{
+    border-color: rgb(130,217,160);
+    box-shadow: 10px 10px 100px 50px rgb(130,217,160);
+    background-color: orange;
+  }
+  100%{
+    border-color: rgb(50,55,205);
+    transform: translate(0,-0px);
+    box-shadow: 10px 10px 100px 50px rgb(50,55,205);
+    background-color: purple;
+  }
+}
+
+
+

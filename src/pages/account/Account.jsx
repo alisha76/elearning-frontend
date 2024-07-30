@@ -21,7 +21,10 @@ const Account = ({user}) => {
   return (
     <div>
     {user && (
-      <div className="profile">
+      <div className="profile"
+       data-aos="zoom-in"
+    data-aos-duration="1000"
+      >
         <h2>My Profile</h2>
         <div className="profile-info">
           <p>

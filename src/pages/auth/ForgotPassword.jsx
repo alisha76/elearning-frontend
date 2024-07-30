@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { server } from "../../main";
-
+import forgotPasswordImage from "../../assets/Images/images (1).png";
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [btnLoading, setBtnLoading] = useState(false);
@@ -26,7 +26,11 @@ const ForgotPassword = () => {
   };
   return (
     <div className="auth-page">
-      <div className="auth-form">
+      <div className="auth-form"
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+      >
+      <img src={forgotPasswordImage} alt="Forgot Password Image" className="auth-image" />
         <h2>Forgot Password</h2>
         <form onSubmit={handleSubmit}>
           <label htmlFor="text">Enter Email</label>

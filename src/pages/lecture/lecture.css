@@ -13,6 +13,13 @@
       width: 70%;
       padding: 10px;
       align-items: center;
+
+      h1{
+        color: #fff;
+      }
+      h3{
+        color: #fff;
+      }
   
       @media (max-width: 768px) {
         width: 90%;
@@ -20,7 +27,7 @@
     }
   
     .right {
-      width: 30%;
+      width: 70%;
   
       .lecture-form {
         background-color: #fff;
@@ -85,10 +92,11 @@
   
   .progress {
     width: 20%;
-    background-color: #333;
+    background-color: #fff;
     padding: 6px;
     border-radius: 5px;
     margin: 3px auto;
     text-align: center;
-    color: white;
+    color: black;
   }
+  /* Feedback section styles */

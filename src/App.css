@@ -7,8 +7,8 @@ body {
 }
 
 .common-btn {
-  background-color: #8a4baf;
-  color: white;
+  background: linear-gradient(to bottom,#4567b7, #6495ed); /* added gradient effect */
+
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -18,7 +18,12 @@ body {
   margin-top: 10px;
 
   &:hover {
-    background-color: #5f357e;
+    background-position: 100% 100%;
+    background: linear-gradient(to bottom, #5f357e, #6c5ce7);
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, #4d0099, #6c00bf); /* changed gradient effect on active */
   }
 
   @media (max-width: 768px) {

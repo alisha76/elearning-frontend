@@ -85,7 +85,10 @@ const AdminCourses = ({ user }) => {
   return (
     <Layout>
       <div className="admin-courses">
-        <div className="left">
+        <div className="left"
+         data-aos="fade-right"
+           data-aos-duration="1000"
+        >
           <h1>All Courses</h1>
           <div className="dashboard-content">
             {courses && courses.length > 0 ? (
@@ -98,10 +101,19 @@ const AdminCourses = ({ user }) => {
           </div>
         </div>
 
-        <div className="right">
+        <div className="right"
+         data-aos="fade-left"
+           data-aos-duration="1000"
+        >
           <div className="add-course">
             <div className="course-form">
-              <h2>Add Course</h2>
+            <h2>
+  <span style={{
+    backgroundImage: "linear-gradient(to right, #4567b7, #8e44ad)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
+  }}>Add Course</span>
+</h2>
               <form onSubmit={submitHandler}>
                 <label htmlFor="text">Title</label>
                 <input

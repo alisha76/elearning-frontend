@@ -20,13 +20,41 @@ const CourseStudy = ({ user }) => {
     <>
       {course && (
         <div className="course-study-page">
-          <img src={`${server}/${course.image}`} alt="" width={350} />
-          <h2>{course.title}</h2>
-          <h4>{course.description}</h4>
-          <h5>by - {course.createdBy}</h5>
-          <h5>Duration - {course.duration} weeks</h5>
+          <img
+                data-aos="zoom-in"
+    data-aos-duration="1000"
+          src={`${server}/${course.image}`} alt="" width={350} />
+          <h2
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+          >{course.title}</h2>
+          <p
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+          >{course.description}</p>
+          <h5
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+          >by - {course.createdBy}</h5>
+          <h5
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+          >Duration - {course.duration} weeks</h5>
           <Link to={`/lectures/${course._id}`}>
-            <h2>Lectures</h2>
+          <h2
+           data-aos="zoom-in"
+    data-aos-duration="1000"
+          >
+  <span
+    style={{
+      backgroundImage: "linear-gradient(to right, #4567b7, #6495ed)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent"
+    }}
+  >
+    Lectures
+  </span>
+</h2>
           </Link>
         </div>
       )}

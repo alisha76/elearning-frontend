@@ -1,10 +1,15 @@
+body {
+  background: linear-gradient(to bottom, #070707 0%, #3534345b 100%);
+}
+
 .profile {
-    background-color: white;
+  background-color: rgba(219, 210, 210, 0.875);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin: 185px auto;
+    animation: fadeIn 0.5s;
   
     @media (max-width: 768px) {
       padding: 10px;
@@ -21,8 +26,25 @@
         color: #333;
   
         strong {
-          color: #8a4baf;
+          /* color: #a00ef4; */
+          background: linear-gradient(to right, #61128f, #db0e74de); /* Add gradient text effect */
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
         }
       }
     }
   }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+ 

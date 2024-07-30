@@ -1,8 +1,26 @@
 .users {
-    width: 350px;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 20px auto;
-    min-height: 80vh;
-    border: solid gray 1px;
-  }
+  width: 700px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 20px auto;
+  min-height: 80vh;
+  border: solid rgb(31, 30, 30) 3px;
+  background-color: #f0f0f0aa; /* add a light gray background */
+  color: #333; /* make the text dark gray */
+  padding: 20px; /* add some padding to make the content more readable */
+}
+
+.users table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.users th, .users td {
+  border: 3px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+.users th {
+  background-color: #f5f5f51a;
+}

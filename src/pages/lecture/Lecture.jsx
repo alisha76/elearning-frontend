@@ -173,7 +173,10 @@ const Lecture = ({ user }) => {
         <Loading />
       ) : (
         <>
-          <div className="progress">
+          <div className="progress"
+           data-aos="zoom-in"
+           data-aos-duration="1000"
+           >
             Lecture completed - {completedLec} out of {lectLength} <br />
             <progress value={completed} max={100}></progress> {completed} %
           </div>
@@ -199,12 +202,18 @@ const Lecture = ({ user }) => {
                       <h3>{lecture.description}</h3>
                     </>
                   ) : (
-                    <h1>Please Select a Lecture</h1>
+                    <h1
+                     data-aos="fade-right"
+    data-aos-duration="1000"
+                    >Please Select a Lecture</h1>
                   )}
                 </>
               )}
             </div>
-            <div className="right">
+            <div className="right"
+             data-aos="fade-left"
+    data-aos-duration="1000"
+            >
               {user && user.role === "admin" && (
                 <button className="common-btn" onClick={() => setShow(!show)}>
                   {show ? "Close" : "Add Lecture +"}
@@ -212,7 +221,10 @@ const Lecture = ({ user }) => {
               )}
 
               {show && (
-                <div className="lecture-form">
+                <div className="lecture-form"
+                 data-aos="zoom-in"
+    data-aos-duration="1000"
+                >
                   <h2>Add Lecture</h2>
                   <form onSubmit={submitHandler}>
                     <label htmlFor="text">Title</label>
@@ -242,7 +254,7 @@ const Lecture = ({ user }) => {
                       <video
                         src={videoPrev}
                         alt=""
-                        width={300}
+                        width={250}
                         controls
                       ></video>
                     )}

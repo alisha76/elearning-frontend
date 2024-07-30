@@ -21,7 +21,10 @@ const Verify = () => {
   };
   return (
     <div className="auth-page">
-      <div className="auth-form">
+      <div className="auth-form"
+            data-aos="zoom-in"
+    data-aos-duration="1000"
+      >
         <h2>Verify Account</h2>
         <form onSubmit={submitHandler}>
           <label htmlFor="otp">Otp</label>

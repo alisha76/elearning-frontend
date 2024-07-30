@@ -1,38 +1,126 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-  
-    .logo {
-      font-size: 25px;
-      font-weight: 600;
-      color: #8a4baf;
-  
-      @media (max-width: 768px) {
-        font-size: 18px;
-      }
-    }
-  
-    .link {
-      display: flex;
-      gap: 2rem;
-  
-      @media (max-width: 768px) {
-        gap: 0.5rem;
-      }
-  
-      a {
-        text-decoration: none;
-        color: #333;
-        transition: 0.3s;
-  
-        &:hover {
-          color: #8a4baf;
-        }
-      }
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #f1e7e7, #2a2929);
+  background-size: 100% 300px;
+  background-position: 0% 100%;
+  transition: background-position 0.5s;
+  position: relative;
+  border: 1px solid #000;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+  color: #4b9eaf;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+  display: none;
+}
+
+.menu-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.link a:hover {
+  background-image: linear-gradient(to bottom, #4b99af, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link a span {
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  background-image: linear-gradient(to bottom, #4b99af, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a span {
+  margin-left: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+  color: #337ab7;
+}
+
+.show {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
   }
+  .nav-links {
+    display: none;
+  }
+  .link.show {
+    display: block;
+  }
+  .link.show .menu-text {
+    display: block;
+  }
+}
+

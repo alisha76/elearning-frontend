@@ -3,6 +3,7 @@ import "./auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserData } from "../../context/UserContext";
 import { CourseData } from "../../context/CourseContext";
+import loginImage from "../../assets/Images/login3 - Copy.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -16,37 +17,49 @@ const Login = () => {
     e.preventDefault();
     await loginUser(email, password, navigate, fetchMyCourse);
   };
+
   return (
     <div className="auth-page">
-      <div className="auth-form">
-        <h2>Login</h2>
-        <form onSubmit={submitHandler}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+      <div className="auth-container">
+        <div className="auth-form"
+         data-aos="fade-right"
+    data-aos-duration="1000"
+        >
+          <h2>Login</h2>
+          <form onSubmit={submitHandler}>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
 
-          <button disabled={btnLoading} type="submit" className="common-btn">
-            {btnLoading ? "Please Wait..." : "Login"}
-          </button>
-        </form>
-        <p>
-          Don't have an account? <Link to="/register">Register</Link>
-        </p>
-        <p>
-          <Link to="/forgot">Forgot password?</Link>
-        </p>
+            <button disabled={btnLoading} type="submit" className="common-btn">
+              {btnLoading? "Please Wait..." : "Login"}
+            </button>
+          </form>
+          <p>
+            Don't have an account? <Link to="/register">Register</Link>
+          </p>
+          <p>
+            <Link to="/forgot">Forgot password?</Link>
+          </p>
+        </div>
+        <div className="auth-image"
+         data-aos="fade-left"
+    data-aos-duration="1000"
+        >
+          <img src={loginImage} alt="login image" />
+        </div>
       </div>
     </div>
   );

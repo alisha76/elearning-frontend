@@ -4,6 +4,8 @@ import Layout from "../Utils/Layout";
 import axios from "axios";
 import { server } from "../../main";
 import "./dashboard.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faVideo, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const AdminDashbord = ({ user }) => {
   const navigate = useNavigate();
@@ -33,17 +35,33 @@ const AdminDashbord = ({ user }) => {
     <div>
       <Layout>
         <div className="main-content">
-          <div className="box">
-            <p>Total Courses</p>
-            <p>{stats.totalCoures}</p>
+          <div className="box"
+           data-aos="flip-right"
+           data-aos-duration="1000"
+           >
+            <p className="box-number">1</p>
+            <p className="box-title">Total Courses</p>
+            <p className="box-value">{stats.totalCoures}</p>
+            <FontAwesomeIcon icon={faBook} className="box-icon" />
           </div>
-          <div className="box">
-            <p>Total Lectures</p>
-            <p>{stats.totalLectures}</p>
+          <div className="box"
+           data-aos="flip-right"
+           data-aos-duration="1000"
+           >
+          <p className="box-number">2</p>
+            <p className="box-title">Total Lectures</p>
+            <FontAwesomeIcon icon={faVideo} className="box-icon" />
+
+            <p className="box-value">{stats.totalLectures}</p>
           </div>
-          <div className="box">
-            <p>Total Users</p>
-            <p>{stats.totalUsers}</p>
+          <div className="box"
+           data-aos="flip-right"
+           data-aos-duration="1000"
+          >
+          <p className="box-number">3</p>
+            <p className="box-title">Total Users</p>
+            <p className="box-value">{stats.totalUsers}</p>
+            <FontAwesomeIcon icon={faUsers} className="box-icon" />
           </div>
         </div>
       </Layout>

@@ -9,9 +9,15 @@ const Courses = () => {
   console.log(courses);
   return (
     <div className="courses">
-      <h2>Available Courses</h2>
+      <h2
+        data-aos="fade-up"
+    data-aos-duration="1000"
+      >Available Courses</h2>
 
-      <div className="course-container">
+      <div className="course-container"
+        data-aos="zoom-in"
+    data-aos-duration="1000"
+      >
         {courses && courses.length > 0 ? (
           courses.map((e) => <CourseCard key={e._id} course={e} />)
         ) : (

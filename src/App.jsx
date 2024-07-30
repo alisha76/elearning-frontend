@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./App.css"
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
@@ -22,8 +22,14 @@ import AdminCourses from "./admin/Courses/AdminCourses";
 import AdminUsers from "./admin/Users/AdminUsers";
 import ForgotPassword from './pages/auth/ForgotPassword'
 import ResetPassword from "./pages/auth/ResetPassword";
+import Contact from './pages/contact/Contact'
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const App = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const {isAuth,user,loading } = UserData();
   return( 
   <>
@@ -35,6 +41,7 @@ const App = () => {
     <Route path="/" element={<Home/>}/>
     <Route path="/about" element={<About/>}/>
     <Route path="/courses" element={<Courses/>}/>
+    <Route path="/contact" element={<Contact/>}/>
     <Route path="/account" element={isAuth?<Account user={user}/>:<Login/>}/>
     <Route path='/login' element={isAuth?<Home/>:<Login/>}/>
     <Route path='/register' element={isAuth?<Home/>:<Register/>}/>

@@ -1,21 +1,28 @@
 .testimonials {
     padding: 80px 0;
     text-align: center;
+    background: linear-gradient(to bottom, #090a0a 0%, #5d5c5c 100%);
+
   
     h2 {
       font-size: 32px;
-      color: #8a4baf;
       margin-bottom: 30px;
     }
   
     .testmonials-cards {
+      transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
+  }
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
   
       .testimonial-card {
-        background-color: white;
+        background-color: rgba(219, 210, 210, 0.875);
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         padding: 20px;
         border-radius: 10px;
@@ -42,7 +49,7 @@
   
         .message {
           font-size: 16px;
-          color: #333;
+          color: #080808;
           margin-bottom: 10px;
         }
   
@@ -59,7 +66,7 @@
   
         .position {
           font-size: 14px;
-          color: #666;
+          color: #252222;
         }
       }
     }
