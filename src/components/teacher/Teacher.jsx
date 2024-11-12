@@ -27,13 +27,13 @@ const Teacher = () => {
   return (
     <div className="teacher-container">
       <div className="teacher-image-container"
-       data-aos="flip-left"
+       data-aos="fade-up"
     data-aos-duration="1000"
       >
         <img src={teacherImage} alt="Teacher Image" className="teacher-image" />
       </div>
       <div className="teacher-actions"
-       data-aos="fade-left"
+       data-aos="fade-up"
     data-aos-duration="1000"
       >
       <h1>Become an 

@@ -22,7 +22,7 @@ const Login = () => {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-form"
-         data-aos="fade-right"
+         data-aos="fade-up"
     data-aos-duration="1000"
         >
           <h2>Login</h2>
@@ -55,7 +55,7 @@ const Login = () => {
           </p>
         </div>
         <div className="auth-image"
-         data-aos="fade-left"
+         data-aos="fade-up"
     data-aos-duration="1000"
         >
           <img src={loginImage} alt="login image" />

@@ -51,7 +51,7 @@ const Testimonials = () => {
             WebkitTextFillColor: "transparent"
           }}>What our students say</span></h2>
       <div className="testmonials-cards"
-        data-aos="flip-left"
+        data-aos="fade-up"
         data-aos-duration="1000"
         >
         {testimonialsData.map((e) => (

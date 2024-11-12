@@ -5,6 +5,7 @@
     gap: 1rem;
   
     .left {
+      flex: 1;
       .dashboard-content {
         display: flex;
         justify-content: space-around;
@@ -20,13 +21,16 @@
     }
   
     .right {
+      width: 300px;
+      margin-left: 20px;
+
       .course-form {
         background-color: #fff;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
-        width: 300px;
+        /* width: 300px; */
   
         h2 {
           font-size: 24px;

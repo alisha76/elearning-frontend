@@ -59,15 +59,18 @@ const CodeSections = () => {
 
   return (
     <>
+    
       <div className="container" style={{
-        height: '60vh', // take up full page height
+        height: '100vh', // take up full page height
+        // width:'96.4%',
         display: 'flex', // use flexbox to align elements
         justifyContent: 'pace-between', // space elements evenly
         padding: '20px', // add some padding
         backgroundColor: 'rgba(0, 0, 0, 0.8)', // glass background
       }}>
+        
         <div className="code-block"
-         data-aos="fade-right"
+         data-aos="fade-up"
     data-aos-duration="1000"
         style={{
           width: '70%', // take up 50% of the page width
@@ -78,7 +81,7 @@ const CodeSections = () => {
           <pre style={{
             width: '90%', // take up full width
             height: '70%', // take up full height
-            padding: '10px',
+            padding: '5px',
             borderRadius: '10px',
             backgroundColor: 'rgba(255, 255, 255, 0.2)', // glass background
             boxShadow: '0px 0px 10px yellow', // yellow shadow effect
@@ -92,14 +95,14 @@ const CodeSections = () => {
           </pre>
         </div>
         <div className="text-section"
-         data-aos="fade-left"
+         data-aos="fade-up"
     data-aos-duration="1000"
         style={{
           width: '90%', // take up 40% of the page width
           marginLeft: '20px',
           marginTop:'100px', // add some margin between the text and code blocks
           marginBottom:'-20px',
-           marginRight:'-100px'
+           marginRight:'0px'
         }}>
          <h2>Unlock Your
   <span style={{
@@ -115,6 +118,8 @@ const CodeSections = () => {
           <button onClick={handleTryItYourselfClick} className="common-btn">Try it yourself</button>
         </div>
       </div>
+
+
       <div className="container" style={{
         height: '60vh', // take up full page height
         display: 'flex', // use flexbox to align elements
@@ -124,7 +129,7 @@ const CodeSections = () => {
         marginTop:'-100px',
       }}>
         <div className="text-section"
-         data-aos="fade-right"
+         data-aos="fade-up"
     data-aos-duration="1000"
         style={{
           width: '90%', // take up 40% of the page width
@@ -147,7 +152,7 @@ const CodeSections = () => {
           <button onClick={handleLearnMoreClick} className="common-btn">Learn More</button>
         </div>
         <div className="code-block"
-         data-aos="fade-left"
+         data-aos="fade-up"
     data-aos-duration="1000"
         style={{
           width: '70%', // take up 50% of the page width
@@ -171,8 +176,11 @@ const CodeSections = () => {
                      </pre>
                    </div>
                  </div>
+                
                </>
              );
            };
            
            export default CodeSections;
+
+        

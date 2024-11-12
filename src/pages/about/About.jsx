@@ -30,15 +30,15 @@ const About = () => {
       </div>
       <div className="about-images">
       <img 
-       data-aos="flip-right"
+       data-aos="fade-up"
     data-aos-duration="1000"
       src={AboutImage} alt="about image" className="about-image" />
       <img 
-       data-aos="flip-right"
+       data-aos="fade-up"
     data-aos-duration="1000"
       src={AboutImage1} alt="about image" className="about-image1" />
       <img 
-       data-aos="flip-right"
+       data-aos="fade-up"
     data-aos-duration="1000"
       src={AboutImage2} alt="about image" className="about-image2" />
       </div>

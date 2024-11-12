@@ -1,41 +1,108 @@
 .about {
-    padding: 80px 0;
-    text-align: center;
-    min-height: 55vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.971) 0%, rgba(0, 0, 0, 0.232) 100%);
-    /* background-attachment: fixed; */
-    /* background-size: 100% 300px; */
-    background-position: 0% 100%;
-  
-    .about-content {
-      max-width: 800px;
-      margin: 0 auto;
-  
-      h2 {
-        font-size: 32px;
-        color: #fff;
-        margin-bottom: 20px;
-      }
-  
-      p {
-        font-size: 16px;
-        color: #fff;
-        line-height: 1.6;
-      }
-    }
-    .about-images {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-      
-    }
-    
-    .about-image,.about-image1,.about-image2 {
-      width: 30%;
-      height: 250px; /* adjust the height to your desired value */
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin: 0 20px; /* add spacing between images */
-    }
+  padding: 80px 0;
+  text-align: center;
+  min-height: 55vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.971) 0%, rgba(0, 0, 0, 0.232) 100%);
+  background-position: 0% 100%;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 2rem; /* Responsive font size */
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1rem; /* Responsive font size */
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Flex container for images */
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Image styles */
+.about-image, .about-image1, .about-image2 {
+  width: 30%;
+  height: auto; /* Fixed height for larger screens */
+  max-height:250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 10px; /* Adjust spacing between images */
+}
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .about-content h2 {
+    font-size: 2.5rem; /* Larger font size for headings */
   }
+  .about-content p {
+    font-size: 1.125rem; /* Slightly larger paragraph font size */
+  }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-content h2 {
+    font-size: 2.25rem; /* Adjust heading size */
+  }
+  .about-images {
+    justify-content: center; /* Center images on medium screens */
+  }
+}
+
+/* Small screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-image, .about-image1, .about-image2 {
+    width: 45%; /* Adjust width for better fit */
+    height: 200px; /* Adjust height for smaller screens */
+    margin: 10px; /* Adjust spacing */
+  }
+}
+
+/* Extra small screens (480px to 767px) */
+@media (max-width: 767px) {
+  .about-image, .about-image1, .about-image2 {
+    width: 100%; /* Full width on small screens */
+    height: 150px; /* Adjust height for smaller screens */
+    margin: 10px 0; /* Vertical spacing */
+  }
+  
+  .about-content h2 {
+    font-size: 1.5rem; /* Smaller heading size */
+  }
+  .about-content p {
+    font-size: 0.875rem; /* Smaller paragraph font size */
+  }
+}
+
+/* Extra extra small screens (below 480px) */
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 1.25rem; /* Further reduce heading size */
+  }
+  .about-content p {
+    font-size: 0.75rem; /* Further reduce paragraph font size */
+  }
+
+  .about-images {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images */
+  }
+
+  .about-image, .about-image1, .about-image2 {
+    width: 90%; /* Slightly less than full width */
+    margin: 5px 0; /* Adjust spacing for vertical stacking */
+  }
+}

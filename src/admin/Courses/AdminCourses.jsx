@@ -86,7 +86,7 @@ const AdminCourses = ({ user }) => {
     <Layout>
       <div className="admin-courses">
         <div className="left"
-         data-aos="fade-right"
+         data-aos="fade-up"
            data-aos-duration="1000"
         >
           <h1>All Courses</h1>
@@ -102,7 +102,7 @@ const AdminCourses = ({ user }) => {
         </div>
 
         <div className="right"
-         data-aos="fade-left"
+         data-aos="fade-up"
            data-aos-duration="1000"
         >
           <div className="add-course">
