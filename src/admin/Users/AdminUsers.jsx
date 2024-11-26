@@ -52,6 +52,31 @@ const AdminUsers = ({ user }) => {
     }
   };
 
+  const deleteUser  = async (id) => {
+    if (confirm("Are you sure you want to delete this user?")) {
+      try {
+        const { data } = await axios.delete(
+          `${server}/api/user/${id}`,
+          {
+            headers: {
+              token: localStorage.getItem("token"),
+            },
+          }
+        );
+  
+        toast.success(data.message);
+        fetchUsers();
+      } catch (error) {
+        // Improved error handling
+        const errorMessage =
+          error.response && error.response.data && error.response.data.message
+            ? error.response.data.message
+            : "An error occurred. Please try again.";
+        toast.error(errorMessage);
+      }
+    }
+  };
+  
   console.log(users);
   return (
     <Layout>
@@ -68,6 +93,8 @@ const AdminUsers = ({ user }) => {
               <td>email</td>
               <td>role</td>
               <td>update role</td>
+              <td>delete User</td>
+
             </tr>
           </thead>
 
@@ -85,6 +112,16 @@ const AdminUsers = ({ user }) => {
                       className="common-btn"
                     >
                       Update Role
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                    onClick={() => deleteUser(e._id)}
+                    className="common-btn"
+                    style={{ background: "red" }}
+
+                    >
+                      Delete
                     </button>
                   </td>
                 </tr>

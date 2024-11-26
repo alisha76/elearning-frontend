@@ -13,7 +13,7 @@ const Footer = () => {
         <p>
           &copy; 2024 Your E-Learning Platform. All rights reserved. 
           <br /> 
-          Made with ❤️ <a href="">Alisha Khan</a>
+          Made with ❤️ <a href="">E-learning website</a>
         </p>
         <div className="social-links">
           <a href="">
